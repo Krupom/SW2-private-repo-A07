@@ -6,10 +6,11 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { Select, MenuItem } from "@mui/material";
 import TextField from "@mui/material/TextField";
 import { useState } from "react";
+import { Dayjs } from "dayjs";
 
 export default function DateReserve() {
 
-    const [reserveDate, setReserveDate] = useState(null);
+    const [reserveDate, setReserveDate] = useState<Dayjs | null>(null);
     const [name, setName] = useState("");
     const [contactNumber, setContactNumber] = useState("");
     const [selectedVenue, setSelectedVenue] = useState("Bloom");
