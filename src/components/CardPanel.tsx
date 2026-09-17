@@ -42,7 +42,7 @@ export default function CardPanel() {
             </div>
             <div>Venue List with Ratings: {compareList.size} </div>
             {Array.from(compareList).map(([venueName, rating]) => (
-                <div key={venueName} data-testid={`${venueName}`} onClick={() => dispatchCompare({ type: 'remove', venueName })}>
+                <div key={venueName} data-testid={`${venueName}`} onClick={() => dispatchCompare({ type: 'remove', venueName, rating: 0 })}>
                     <span>{venueName}: {rating}</span>
                 </div>
             ))}
